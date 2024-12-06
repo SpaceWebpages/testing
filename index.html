@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!--link rel="stylesheet" href="/StyleDocs/style.css"--->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav{
+            position: fixed;
+            height: 80px;
+            width: 100%;
+            background-color: #1e1e1e;
+            z-index: 1;
+        }
+        nav .links{
+            position: absolute;
+            line-height: 80px;
+            right: 80px;
+            display: flex;
+        }
+        nav .links a{
+            font-size: 22px;
+            color: #fff;
+            letter-spacing: .5px;
+            text-decoration: none;
+            margin: 0 40px;
+        }
+        nav .links .user__icon{
+            position: relative;
+            top: 20px;
+            left: 40px;
+            height: 40px;
+            width: 40px;
+            background-color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .side__bar{
+            position: fixed;
+            height: 15em;
+            width: 10em;
+            right: 80px;
+            top: 60px;
+            background-color: #fff;
+            overflow-y: scroll;
+            display: none;
+            z-index: 1;
+        }
+        .side__bar .side__bar__links{
+            text-align: left;
+        }
+        .side__bar .side__bar__links a{
+            display: block;
+            color: #1e1e1e;
+            text-decoration: none;
+            padding: 10px 10px;
+        }
+        .side__bar .side__bar__links a:hover{
+            background-color: silver;
+            color: #fff;
+        }
+        #active, nav .links a:hover{
+            border-bottom: 2px solid #fff;
+        }
+        
+        /* Home Content Section */
+        
+        
+        /* Media Queries MAX-WIDTH: 600px */
+        
+        @media only screen and (max-width: 600px){
+            nav{
+                background-color: transparent;
+            }
+            nav .links{
+                content: '';
+                background-color: #1e1e1e;
+                height: 15em;
+                width: 10em;
+                top: 0;
+                right: 0;
+                display: block;
+                text-align: center;
+                overflow-y: scroll;
+            }
+            nav .links .user__icon{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="links">
+            <a id="active" href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Playlist</a>
+            <a href="#">Learn</a>
+            <div class="user__icon" id="user" title="Account">
+                
+            </div>
+        </div>
+    </nav>
+    <div class="side__bar" id="side__links">
+        <div class="side__bar__links">
+            <a href="#">HAHA1</a><hr>
+            <a href="#">HAHA2</a><hr>
+            <a href="#">HAHA3</a><hr>
+            <a href="#">HAHA4</a><hr>
+            <a href="#">HAHA4</a><hr>
+            <a href="#">HAHA4</a><hr>
+            <a href="#">HAHA4</a><hr>
+        </div>
+    </div>
+    <div class="home__video" id="vid">
+        <video src="#"></video>
+    </div>
+    <div class="home__video" id="vid">
+        <video src="#"></video>
+    </div>
+    <script src="/FunctionDocs/script.js"></script>
+</body>
+</html>
